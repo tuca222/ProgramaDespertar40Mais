@@ -226,7 +226,7 @@ const LandingPage = () => {
       {/* Sobre Mim */}
       <section id='sobre-mim' className="py-5 bg-cyan-200 px-4 shadow-2xl">
         <div>
-         <h2 className="text-3xl font-bold mb-4 text-violet-700 py-2">Sobre Mim</h2>
+         <h2 className="text-3xl font-bold mb-4 text-violet-700 py-2">Conheça um pouco sobre a minha história</h2>
         </div>
         <div className="max-w-4xl mx-auto flex flex-col lg:flex-row justify-center items-center">
           <div className="md:w-2/3 mb-6 md:mb-0">
@@ -258,7 +258,6 @@ const LandingPage = () => {
       {/* Um Pouco Mais Sobre Minha História */}
       <section className="bg-cyan-200 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-violet-700 text-center">Conheça um pouco mais sobre a minha história</h2>
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-end gap-5">
             {/* <div className="flex justify-center relative mt-6 mb-6" style={{ aspectRatio: '1080 / 1920' }}>
                 <video
