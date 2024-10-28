@@ -19,7 +19,7 @@ const DepoimentosSection = ({ id }) => {
             </p>
             <div className="flex flex-row justify-center items-center mt-4">
               <img src="https://via.placeholder.com/50" alt="User Icon" className="w-12 h-12 rounded-full ml-4 mr-4" />
-              <p className="mt-4 font-semibold">- Lu Brasil</p>
+              <p className="mt-4 font-semibold">- Luciana Brasil</p>
             </div>
           </div>
 

@@ -19,7 +19,7 @@ const LandingPage = () => {
             Nutricionista Gerusa Lorenzetti
           </h1>
           <a
-            href="#preco"
+            href="#como-ira-funcionar"
             className="bg-violet-700 hover:bg-lightPurple text-white px-4 py-2 rounded-full transition duration-300 breathing text-center"
           >
             Garanta sua vaga!
