@@ -5,10 +5,10 @@ const Pagamento = () => {
         <div className="flex flex-col justify-center items-center md:mt-10 md:mb-10">
             <h1 className="text-4xl md:text-5xl font-bold mb-10 text-violet-700">Quero meu corpo dos sonhos agora!</h1>
             <div className="flex flex-row justify-center items-center gap-5 md:gap-20 mt-6 mb-6">
-                <div className="font-bold text-2xl">
+                <div className="font-bold text-xl md:text-2xl">
                     <p className="mt-5 mb-4">R$ 197,00 à vista (no Pix ou no Cartão)</p>
                     <p className="mb-4">ou até</p>
-                    <p className="mb-4">6 x de R$ 40,00</p>
+                    <p className="mb-4">6x de R$ 40,00</p>
                 </div>
                 <div className="flex flex-col">
                     <h2 className="text-4xl font-bold mb-6 text-violet-700">Forma de pagameto:</h2>
@@ -16,21 +16,21 @@ const Pagamento = () => {
                         href=""
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-3xl mb-6 py-3 font-semibold bg-yellow-500 hover:bg-yellow-600 border-black text-center border-2 rounded-xl w-full max-w-md">
+                        className="text-xl md:text-3xl mb-6 py-3 font-semibold bg-yellow-500 hover:bg-yellow-600 border-black text-center border-2 rounded-xl w-full max-w-md">
                             PIX
                     </a>
                     <a
                         href=""
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-3xl mb-6 py-3 font-semibold bg-yellow-500 hover:bg-yellow-600 border-black text-center border-2 rounded-xl w-full max-w-md">
+                        className="text-xl md:text-3xl mb-6 py-3 font-semibold bg-yellow-500 hover:bg-yellow-600 border-black text-center border-2 rounded-xl w-full max-w-md">
                             Cartão à vista
                     </a>
                     <a
                         href=""
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-3xl mb-6 py-3 font-semibold bg-yellow-500 hover:bg-yellow-600 border-black text-center border-2 rounded-xl w-full max-w-md">
+                        className="text-xl md:text-3xl mb-6 py-3 font-semibold bg-yellow-500 hover:bg-yellow-600 border-black text-center border-2 rounded-xl w-full max-w-md">
                             Cartão em vezes
                     </a>
                 </div>

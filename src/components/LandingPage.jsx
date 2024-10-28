@@ -68,54 +68,25 @@ const LandingPage = () => {
                 >
                 </iframe>
             </div>
-          <a
+          {/* <a
             href="#sobre-o-programa"
             className="bg-yellow-600 hover:bg-yellow-700 text-violet-700 font-bold ml-5 mr-5 text-lg py-2 md:py-3 px-4 rounded-full transition duration-300 breathing"
           >
             Conheça mais sobre o Despertar 40+
-          </a> 
+          </a>  */}
         </div>
       </section>
 
       {/* O que é o Programa */}
-      <section id="sobre-o-programa" className=" bg-gradient-r-purple-yellow-opacity px-4 py-10">
+      <section id="sobre-o-programa" className=" bg-gradient-r-purple-yellow-opacity px-4">
         <div className="flex flex-col justify-center items-center max-w-4xl mx-auto font-semibold">
-          <h2 className="text-3xl font-bold mb-8 text-violet-700 text-center">O Que é o Despertar 40+?</h2>
+          <h2 className="text-3xl font-bold mt-8 mb-8 text-violet-700 text-center">O Que é o Despertar 40+?</h2>
           <p className="text-lg text-gray-700 mb-5">
-            O Despertar 40+ é o programa de hábitos saudáveis para mulheres que desejam alcançar o seu corpo dos sonhos.
-          </p>
-          <p className="text-lg text-gray-700 mb-5">
-            Com um compilado de estratégias nutricionais e comportamentais, você ganhará autonomia para nunca mais sofrer com efeito sanfona e outros sintomas 	da menopausa.
-          </p>
-          {/* <p className="text-lg text-gray-700">
-            Com este programa você irá ampliar o seu conhecimento para tomar as rédeas da sua vida. Porque o conhecimento é libertador!
+            É um compilado de técnicas e práticas pensadas para que você consiga, de fato, ter o corpo dos sonhos.
           </p>
           <p className="text-lg text-gray-700">
-            Estaremos juntas através do Instagram exclusivo do Despertar 40+, onde você acompanhará a minha rotina durante as 4 semanas de projeto.
-          </p> */}
-          <p className="text-lg text-gray-700">
-            A verdadeira transformação vem com comprometimento e dedicação, e eu estarei junto a você para te mostrar que é possível alcançar os seus objetivos.
+            Com estratégias nutricionais e comportamentais você ganhará autonomia para nunca mais sofrer com efeito sanfona e outros sintomas da menopausa.
           </p>
-        </div>
-      </section>
-
-      {/* Botões */}
-      <section className="flex flex-col md:flex-row justify-between items-center bg-gradient-r-purple-yellow-opacity py-5 px-4 md:px-20 lg:px-44">
-        <div className='flex justify-center items-center w-full md:w-auto mt-4 md:mb-0'>
-          <a
-            href="#como-ira-funcionar"
-            className="hover:bg-purple-100 text-violet-700 font-bold text-lg px-2 py-1 rounded-full transition duration-300 breathing"
-          >
-            Como irá funcionar?
-          </a>
-        </div>
-        <div className='flex justify-center items-center w-full md:w-auto mb-4 md:mb-0'>
-          <a
-            href="#pra-quem"
-            className="hover:bg-purple-100 text-violet-700 font-bold text-lg px-2 py-1 rounded-full transition duration-300 breathing"
-          >
-            Pra quem é o Despertar 40+?
-          </a>
         </div>
       </section>
 
@@ -228,21 +199,18 @@ const LandingPage = () => {
         <PrecoSection />
       </section>
 
+      {/* Depoimentos */}
+      <section className="py-10 bg-white shadow-2xl">
+        <DepoimentosSection id="depoimentos" />
+      </section>
+
       {/* FAQ e Botões */}
       <section className='flex flex-col bg-violet-200 justify-between gap-8 p-4 md:p-8 shadow-2xl'>  
-        <div className="w-full flex flex-col items-center gap-10 order-1">
-          <a
-            href="#depoimentos"
-            className="bg-violet-600 hover:bg-violet-500 text-yellow-600 font-semibold text-lg lg:text-xl text-center mr-5 ml-5 px-5 py-2 md:mb-8 rounded-full transition duration-300 breathing break-words"
-          >
-            Veja relatos dos meus pacientes!
-          </a>
-        </div>
-        <div className="w-full flex flex-col lg:flex-row items-center lg:justify-center gap-8 order-2">
+        <div className="w-full flex flex-col lg:flex-row items-center lg:justify-center gap-8">
           <div className="w-full lg:w-1/2 flex flex-col items-center">
-            <p className="text-lg lg:text-2xl font-bold mb-6 py-1 text-gray-600 bg-violet-400 border-2 border-dashed rounded-full border-yellow-700 text-center w-full max-w-md">
+            <h2 className="text-2xl font-bold mb-6 py-1 text-gray-600 bg-violet-400 border-2 border-dashed rounded-full border-yellow-700 text-center w-full max-w-md">
               Ficou com alguma dúvida?
-            </p>
+            </h2>
             <img
               src={FAQImg}
               alt="Um pouco mais sobre mim"
@@ -253,19 +221,6 @@ const LandingPage = () => {
             <FaqSection />
           </div>
         </div>
-        <div className="w-full flex flex-col items-center gap-10 order-4">
-          <a
-            href="#sobre-mim"
-            className="bg-violet-600 hover:bg-violet-500 text-yellow-600 font-semibold text-lg lg:text-xl text-center mr-5 ml-5 px-5 py-2 md:mt-8 rounded-full transition duration-300 breathing break-words"
-          >
-            Conheça um pouco sobre mim!
-          </a>
-        </div>
-      </section>
-
-      {/* Depoimentos */}
-      <section className="py-10 bg-white shadow-2xl">
-        <DepoimentosSection id="depoimentos" />
       </section>
 
       {/* Sobre Mim */}
