@@ -45,12 +45,14 @@ const PagamentoSection = () => {
                         <a
                             href="https://www.asaas.com/c/g0jp71ttdrcprpyb"
                             rel="noopener noreferrer"
+                            target="_blank"
                             className="text-xl md:text-3xl mb-6 py-3 font-semibold bg-yellow-500 hover:bg-yellow-600 border-black text-center border-2 rounded-xl w-full max-w-md">
                                 Cartão à vista
                         </a>
                         <a
                             href="https://www.asaas.com/c/c5lpxfdvwtt60741"
                             rel="noopener noreferrer"
+                            target="_blank"
                             className="text-xl md:text-3xl mb-6 py-3 font-semibold bg-yellow-500 hover:bg-yellow-600 border-black text-center border-2 rounded-xl w-full max-w-md">
                                 Cartão em vezes
                         </a>
