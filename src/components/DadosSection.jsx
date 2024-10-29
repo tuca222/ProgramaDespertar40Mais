@@ -1,59 +1,78 @@
-import React, { useState, useRef }  from "react";
+import React, { useState, useRef } from "react";
 import PagamentoSection from "./PagamentoSection";
 
 const DadosSection = () => {
-    const [nome, setNome] = useState('');
-    const [celular, setCelular] = useState('');
-    const [errors, setErrors] = useState({ nome: '', celular: '' });
+    const [nomeCompleto, setNomeCompleto] = useState('');
+    const [whatsapp, setWhatsapp] = useState('');
+    const [errors, setErrors] = useState({ nomeCompleto: '', whatsapp: '' });
     
     const [showPagamentoSection, setShowPagamentoSection] = useState(false);
 
     const sectionRef = useRef(null);
 
-    const handleNomeChange = (event) => {
+    const handleNomeCompletoChange = (event) => {
         const value = event.target.value;
         const regex = /^[a-zA-Z\s]*$/;
         if (regex.test(value) && value.length <= 50) {
-            setNome(value);
-            setErrors((prev) => ({ ...prev, nome: '' }));
+            setNomeCompleto(value);
+            setErrors((prev) => ({ ...prev, nomeCompleto: '' }));
         }
     };
 
-    const handleCelularChange = (event) => {
+    const handleWhatsappChange = (event) => {
         let value = event.target.value.replace(/\D/g, '');
     
         if (value.length <= 11) {
             if (value.length > 2) value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
             if (value.length > 7) value = `${value.slice(0, 10)}-${value.slice(10)}`;
             
-            setCelular(value);
+            setWhatsapp(value);
     
-            setErrors((prev) => ({ ...prev, celular: '' }));
+            setErrors((prev) => ({ ...prev, whatsapp: '' }));
         }
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         let valid = true;
-        if (nome.trim().length < 8) {
-            setErrors((prev) => ({ ...prev, nome: 'Nome completo é obrigatório!' }));
+
+        if (nomeCompleto.trim().length < 8) {
+            setErrors((prev) => ({ ...prev, nomeCompleto: 'Nome completo é obrigatório!' }));
             valid = false;
         } else {
-            setErrors((prev) => ({ ...prev, nome: '' })); 
+            setErrors((prev) => ({ ...prev, nomeCompleto: '' })); 
         }
 
-        if (celular.replace(/\D/g, '').length < 11) {
-            setErrors((prev) => ({ ...prev, celular: 'Número de WhatsApp é obrigatório e precisa ter 11 dígitos!' }));
+        if (whatsapp.replace(/\D/g, '').length < 11) {
+            setErrors((prev) => ({ ...prev, whatsapp: 'Número de WhatsApp é obrigatório e precisa ter 11 dígitos!' }));
             valid = false;
         } else {
-            setErrors((prev) => ({ ...prev, celular: '' })); 
+            setErrors((prev) => ({ ...prev, whatsapp: '' })); 
         }       
         
         if (valid) {
-            console.log('Nome enviado:', nome);
-            console.log('Celular enviado:', celular);
-            setShowPagamentoSection(true);
-            sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+            console.log('Nome Completo enviado:', nomeCompleto);
+            console.log('Whatsapp enviado:', whatsapp);
+            
+            try {
+                const response = await fetch('/api/proxy', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ nomeCompleto, whatsapp })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`Erro ao enviar dados para o Google Script: ${response.status} - ${response.statusText}`);
+                }
+    
+                const data = await response.json();
+                console.log('Dados enviados com sucesso:', data.message);
+
+                setShowPagamentoSection(true);
+                sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+            } catch (error) {
+                console.error('Erro ao enviar os dados:', error);
+            }
         }
     };
 
@@ -67,26 +86,28 @@ const DadosSection = () => {
             <div>
                 <h2 className="text-violet-700 mb-2 font-bold text-xl">Nome Completo:</h2>
                 <input
+                    id="nomeCompleto"
                     type="text"
-                    value={nome}
-                    onChange={handleNomeChange}
+                    value={nomeCompleto}
+                    onChange={handleNomeCompletoChange}
                     placeholder="Digite seu nome e sobrenome"
                     className="p-2 border border-gray-300 rounded-xl w-64"
                     minLength={8}
                     required
                 />
-                {errors.nome && <p className="text-red-500">{errors.nome}</p>}
+                {errors.nomeCompleto && <p className="text-red-500">{errors.nomeCompleto}</p>}
 
                 <h2 className="text-violet-700 mt-6 mb-2 font-bold text-xl">WhatsApp (com DDD):</h2>
                 <input
+                    id="whatsapp"
                     type="tel"
-                    value={celular}
-                    onChange={handleCelularChange}
+                    value={whatsapp}
+                    onChange={handleWhatsappChange}
                     placeholder="Digite seu WhatsApp"
                     className="p-2 border border-gray-300 rounded-xl w-64"
                     required
                 />
-                {errors.celular && <p className="text-red-500">{errors.celular}</p>}
+                {errors.whatsapp && <p className="text-red-500">{errors.whatsapp}</p>}
 
             </div>
             <button onClick={handleSubmit} className="bg-yellow-500 text-violet-700 font-bold py-2 px-4 rounded-full mt-6">Quero fazer parte do Despertar 40+!</button>

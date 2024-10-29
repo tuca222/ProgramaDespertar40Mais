@@ -55,8 +55,26 @@ const ProgramaSection = ({ id }) => {
 
           {/* 3ª Semana */}
           <div className="bg-white p-6 rounded-lg shadow-md flex-1 min-w-[300px] w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
-            <h3 className="text-xl font-semibold text-purple-800 mb-2">Semana 3: Otimizando a Queima de Gordura</h3>
+          <h3 className="text-xl font-semibold text-purple-800 mb-2">Semana 3: Menopausa</h3>
             <h3 className="text-xl font-semibold text-purple-800 mb-2">25/11 - 01/12</h3>
+            <h3 className="text-xl font-semibold text-purple-800 mb-5">Compreendendo o que acontece no seu corpo durante a Menopausa!</h3>
+            <p className="text-gray-700 mt-5 text-lg">Nesta última semana, vamos mergulhar em temas fundamentais para o bem-estar feminino durante e após a menopausa, abordando questões hormonais, de saúde e longevidade.</p>
+            <ul className="list-disc text-left pl-10 text-lg mt-5 text-gray-700 space-y-4">
+              <li>Controle do estresse</li>
+              <li>Sintomas da TPM e endometriose</li>
+              <li>Live com médica ginecologista</li>
+              <li>Menopausa e envelhecimento feminino</li>
+              <li>Prevenção e controle de osteoporose e osteopenia</li>
+              <li>A importância da alimentação durante a menopausa</li>
+              <li>Longevidade</li>
+            </ul>
+          </div>
+          
+
+          {/* 4ª Semana */}
+          <div className="bg-white p-6 rounded-lg shadow-md flex-1 min-w-[300px] w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
+            <h3 className="text-xl font-semibold text-purple-800 mb-2">Semana 4: Otimizando a Queima de Gordura</h3>
+            <h3 className="text-xl font-semibold text-purple-800 mb-2">02/12 - 08/12</h3>
             <h3 className="text-xl font-semibold text-purple-800 mb-5">Seu corpo dos sonhos na menopausa!</h3>
             <p className="text-gray-700 mt-5 text-lg">Nesta semana, vamos focar em como alcançar o seu corpo dos sonhos durante a menopausa, utilizando estratégias que promovem a saúde e longevidade.</p>
             <ul className="list-disc text-left pl-10 text-lg mt-5 text-gray-700 space-y-4">
@@ -68,23 +86,6 @@ const ProgramaSection = ({ id }) => {
               <li>Como encontrar prazeres além da comida</li>
               <li>Live com personal trainer</li>
               <li>Controle Diário e Suporte</li>
-            </ul>
-          </div>
-
-          {/* 4ª Semana */}
-          <div className="bg-white p-6 rounded-lg shadow-md flex-1 min-w-[300px] w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
-          <h3 className="text-xl font-semibold text-purple-800 mb-2">Semana 4: Menopausa</h3>
-            <h3 className="text-xl font-semibold text-purple-800 mb-2">02/12 - 08/12</h3>
-            <h3 className="text-xl font-semibold text-purple-800 mb-5">Compreendendo o que acontece no seu corpo durante a Menopausa!</h3>
-            <p className="text-gray-700 mt-5 text-lg">Nesta última semana, vamos mergulhar em temas fundamentais para o bem-estar feminino durante e após a menopausa, abordando questões hormonais, de saúde e longevidade.</p>
-            <ul className="list-disc text-left pl-10 text-lg mt-5 text-gray-700 space-y-4">
-              <li>Controle do estresse</li>
-              <li>Sintomas da TPM e endometriose</li>
-              <li>Live com médica ginecologista</li>
-              <li>Menopausa e envelhecimento feminino</li>
-              <li>Prevenção e controle de osteoporose e osteopenia</li>
-              <li>A importância da alimentação durante a menopausa</li>
-              <li>Longevidade</li>
             </ul>
           </div>
         </div>
