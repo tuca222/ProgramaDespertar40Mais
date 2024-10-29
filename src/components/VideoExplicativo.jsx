@@ -10,9 +10,11 @@ const VideoExplicativo = () => {
             const largura = window.innerWidth;
     
             if (largura < 830) {
-                setIframeSrc("https://www.youtube.com/embed/H-rY0cDLt8Y");
+                // setIframeSrc("https://www.youtube.com/embed/H-rY0cDLt8Y");
+                setIframeSrc("https://www.youtube.com/embed/xIOYGxVYDog")
                 setDivStyle({ aspectRatio: '1080 / 1920' });
-                setIframeStyle({ maxHeight: '700px' });
+                //setIframeStyle({ maxHeight: '700px' });
+                setIframeStyle({ minHeight: '600px', minWidth: '400px' });
             } else {
                 setIframeSrc("https://www.youtube.com/embed/rA5LzydX1lE");
                 setDivStyle({ maxHeight: '600px' });

@@ -1,5 +1,8 @@
 import React from 'react';
 import PacienteSilvana from '../assets/pacientes/Silvana.jpg';
+import PacienteLuciana from '../assets/pacientes/Luciana.png';
+import PacienteGuilherme from '../assets/pacientes/Guilherme.png';
+import PacienteMaria from '../assets/pacientes/Maria.png';
 
 const DepoimentosSection = ({ id }) => {
   return (
@@ -18,7 +21,12 @@ const DepoimentosSection = ({ id }) => {
               não aguentaria 30 dias. hehe"
             </p>
             <div className="flex flex-row justify-center items-center mt-4">
-              <img src="https://via.placeholder.com/50" alt="User Icon" className="w-12 h-12 rounded-full ml-4 mr-4" />
+              <img 
+                src={PacienteLuciana}
+                alt="Icone Luciana"
+                className="w-12 h-12 rounded-full ml-4 mr-4"
+                style={{ filter: 'blur(1px)' }}
+              />
               <p className="mt-4 font-semibold">- Luciana Brasil</p>
             </div>
           </div>
@@ -29,7 +37,12 @@ const DepoimentosSection = ({ id }) => {
               me sinto muito melhor mesmo. E eu adoro o seu jeito leve e descomplicado, fez tudo ficar muito mais fácil de aplicar e seguir. Você é fera!!! 🤩🙏🏽🙏🏽"
             </p>
             <div className="flex flex-row justify-center items-center mt-4">
-              <img src="https://via.placeholder.com/50" alt="User Icon" className="w-12 h-12 rounded-full ml-4 mr-4" />
+              <img
+                src={PacienteGuilherme}
+                alt="Icone Guilherme"
+                className="w-12 h-12 rounded-full ml-4 mr-4"
+                style={{ filter: 'blur(1px)' }}
+              />
               <p className="mt-4 font-semibold">- Guilherme Machado</p>
             </div>
           </div>
@@ -44,7 +57,7 @@ const DepoimentosSection = ({ id }) => {
             <div className="flex flex-row justify-center items-center mt-4">
               <img 
                 src={PacienteSilvana} 
-                alt="User Icon" 
+                alt="Icone Silvana" 
                 className="w-12 h-12 rounded-full ml-4 mr-4" 
                 style={{ filter: 'blur(1px)' }}
               />
@@ -58,7 +71,12 @@ const DepoimentosSection = ({ id }) => {
               não só pela estética mas por saber que consigo me cuidar, comer bem, saudável, com limites sem precisar descontar minhas emoções na alimentação. E vc me inspira mto ♥️♥️♥️ só agradeço por ter te encontrado!🥰"
             </p>
             <div className="flex flex-row justify-center items-center mt-4">
-              <img src="https://via.placeholder.com/50" alt="User Icon" className="w-12 h-12 rounded-full ml-4 mr-4" />
+              <img
+                src={PacienteMaria}
+                alt="Icone Maria"
+                className="w-12 h-12 rounded-full ml-4 mr-4"
+                style={{ filter: 'blur(1px)' }}
+              />
               <p className="mt-4 font-semibold">- Maria Lygia</p>
             </div>
           </div>
