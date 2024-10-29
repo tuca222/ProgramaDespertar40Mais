@@ -20,25 +20,42 @@ const FaqSection = () => {
     },
     {
       question: 'Como funciona o acompanhamento?',
-      answer: 'O acompanhamento do Despertar 40+ será feito através do Instagram e do grupo do WhatsApp, onde você terá acesso a conteúdos exclusivos e dicas. Além disso, teremos lives semanais para tirar dúvidas e te ajudar a alcançar seus objetivos.',
+      answer: 'O acompanhamento do Despertar 40+ será feito através do Instagram Secreteo e do Grupo do WhatsApp, onde você terá acesso a conteúdos exclusivos e dicas. Além disso, teremos lives semanais para tirar dúvidas e te ajudar a alcançar seus objetivos.',
+    },
+    {
+      question: 'Como irei para o Grupo do Whats e para o Instagram Secreto?',
+      answer: 'Após o seu pagamento ser confirmado, você será adicionada no Grupo do WhatsApp pela nossa equipe. No domingo, dia 10/11/2024, você recebá um link no Grupo do Whats para entrar no Instagram Secreto.',
     },
     {
       question: 'Como vai funcionar o reembolso?',
-      answer: 'Resposta',
+      answer: (
+        <>
+          O reembolso poderá ser feito até o dia 10/11/2024, um dia antes de iniciar o programa, pois a partir do dia 11/11 você já terá acesso aos materiais exclusivos do Despertar 40+. Para isso, basta enviar uma mensagem no WhatsApp {' '}
+          <a
+            href="https://wa.me/5548999694084?text=Oi,%20gostaria%20de%20pedir%20o%20reembolso%20do%20Despertar%2040%2B"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-violet-500"
+          >
+            clicando aqui
+          </a>.
+        </>
+      ),
     },
     {
       question: 'Preciso de ajuda, ainda tenho algumas dúvidas!',
       answer: (
         <>
-          Se você ficou com alguma outra dúvida,{' '}
+          Se você ainda ficou com alguma dúvida, fale comigo {' '}
           <a
             href="https://wa.me/5548999694084?text=Oi,%20preciso%20de%20ajuda%20com%20o%20Despertar%2040%2B"
             target="_blank"
             rel="noopener noreferrer"
             className="underline decoration-violet-700"
           >
-            clique aqui para me chamar no WhatsApp
-          </a>.
+            clicando aqui 
+          </a>
+          {' '} para me mandar uma mensagem no WhatsApp.
         </>
       ),
     },

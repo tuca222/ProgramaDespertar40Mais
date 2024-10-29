@@ -8,6 +8,7 @@ import FAQImg from '../assets/ImagemFAQ.png';
 import FaqSection from './FaqSection';
 import DepoimentosSection from './DepoimentosSection';
 import PrecoSection from './PrecoSection';
+import VideoExplicativo from './VideoExplicativo';
 
 const LandingPage = () => {
   return (
@@ -56,24 +57,7 @@ const LandingPage = () => {
       <section id="video-explicativo" className="py-2 bg-video-r-purple-yellow-opacity shadow-2xl">
         <div className="flex flex-col justify-center items-center gap-6 py-4 px-4 max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-violet-700">Assista ao Vídeo Explicativo do Despertar 40+</h2>
-            <div className="flex justify-center relative mt-6 mb-6" style={{ aspectRatio: '1080 / 1920' }}>
-                <iframe
-                  title="Despertar 40+ - Vídeo Explicativo"
-                  className="h-full rounded-lg shadow-lg object-cover w-full max-w-sm md:max-w-lg mx-auto"
-                  src="https://www.youtube.com/embed/H-rY0cDLt8Y"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{ maxHeight: '700px' }}
-                  loading="lazy"
-                >
-                </iframe>
-            </div>
-          {/* <a
-            href="#sobre-o-programa"
-            className="bg-yellow-600 hover:bg-yellow-700 text-violet-700 font-bold ml-5 mr-5 text-lg py-2 md:py-3 px-4 rounded-full transition duration-300 breathing"
-          >
-            Conheça mais sobre o Despertar 40+
-          </a>  */}
+          <VideoExplicativo />
         </div>
       </section>
 

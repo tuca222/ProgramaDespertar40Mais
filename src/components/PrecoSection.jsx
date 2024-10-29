@@ -1,21 +1,21 @@
 import React, { useState, useRef } from "react";
-import Pagamento from './Pagamento';
+import DadosSection from './DadosSection';
 
 const PrecoSection = () => {
     // State para mostrar ou não o pagamento
-    const [showPagamento, setShowPagamento] = useState(false);
+    const [showDadosSection, setShowDadosSection] = useState(false);
 
     // Referência para a seção
     const sectionRef = useRef(null);
 
     const handleButtonClick = () => {
-        setShowPagamento(true);
+        setShowDadosSection(true);
         // Rolar até o início da seção
         sectionRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
-    if (showPagamento) {
-        return <Pagamento />;
+    if (showDadosSection) {
+        return <DadosSection />;
     }
 
     return (
