@@ -49,13 +49,13 @@ const DadosSection = () => {
         } else {
             setErrors((prev) => ({ ...prev, whatsapp: '' })); 
         }       
-        
+
         if (valid) {
             console.log('Nome Completo enviado:', nomeCompleto);
             console.log('Whatsapp enviado:', whatsapp);
             
             try {
-                const response = await fetch('/api/proxy', {
+                const response = await fetch('https://script.google.com/macros/s/AKfycbzuFCU0ZivT7nlBJ2YQ7HYQPtXbkobQDU0ZJyzeyiFZmkilh6cpAS4juG3V64vlNPHuVQ/exec', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ nomeCompleto, whatsapp })
