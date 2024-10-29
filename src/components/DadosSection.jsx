@@ -4,25 +4,57 @@ import PagamentoSection from "./PagamentoSection";
 const DadosSection = () => {
     const [nome, setNome] = useState('');
     const [celular, setCelular] = useState('');
+    const [errors, setErrors] = useState({ nome: '', celular: '' });
+    
     const [showPagamentoSection, setShowPagamentoSection] = useState(false);
-
-    const handleNomeChange = (event) => {
-        setNome(event.target.value);
-    };
-
-    const handleCelularChange = (event) => {
-        setCelular(event.target.value);
-    };
 
     const sectionRef = useRef(null);
 
+    const handleNomeChange = (event) => {
+        const value = event.target.value;
+        const regex = /^[a-zA-Z\s]*$/;
+        if (regex.test(value) && value.length <= 50) {
+            setNome(value);
+            setErrors((prev) => ({ ...prev, nome: '' }));
+        }
+    };
+
+    const handleCelularChange = (event) => {
+        let value = event.target.value.replace(/\D/g, '');
+    
+        if (value.length <= 11) {
+            if (value.length > 2) value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+            if (value.length > 7) value = `${value.slice(0, 10)}-${value.slice(10)}`;
+            
+            setCelular(value);
+    
+            setErrors((prev) => ({ ...prev, celular: '' }));
+        }
+    };
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('Nome enviado:', nome);
-        console.log('Celular enviado:', celular);
-        setShowPagamentoSection(true);
-        // Rolar até o início da seção
-        sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        let valid = true;
+        if (nome.trim().length < 8) {
+            setErrors((prev) => ({ ...prev, nome: 'Nome completo é obrigatório!' }));
+            valid = false;
+        } else {
+            setErrors((prev) => ({ ...prev, nome: '' })); 
+        }
+
+        if (celular.replace(/\D/g, '').length < 11) {
+            setErrors((prev) => ({ ...prev, celular: 'Número de WhatsApp é obrigatório e precisa ter 11 dígitos!' }));
+            valid = false;
+        } else {
+            setErrors((prev) => ({ ...prev, celular: '' })); 
+        }       
+        
+        if (valid) {
+            console.log('Nome enviado:', nome);
+            console.log('Celular enviado:', celular);
+            setShowPagamentoSection(true);
+            sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
     };
 
     if (showPagamentoSection) {
@@ -33,24 +65,28 @@ const DadosSection = () => {
         <div ref={sectionRef} className="flex flex-col justify-center items-center md:mt-10 md:mb-10">
             <h1 className="text-4xl font-bold mb-10 text-violet-700">Quero meu corpo dos sonhos agora!</h1>
             <div>
-                <h2 className="text-violet-700 mb-2 font-bold text-xl">Seu Nome:</h2>
+                <h2 className="text-violet-700 mb-2 font-bold text-xl">Nome Completo:</h2>
                 <input
                     type="text"
                     value={nome}
                     onChange={handleNomeChange}
-                    placeholder="Digite seu nome"
-                    className="p-2 border border-gray-300 rounded-xl"
+                    placeholder="Digite seu nome e sobrenome"
+                    className="p-2 border border-gray-300 rounded-xl w-64"
+                    minLength={8}
                     required
                 />
-                <h2 className="text-violet-700 mt-6 mb-2 font-bold text-xl">Seu WhatsApp:</h2>
+                {errors.nome && <p className="text-red-500">{errors.nome}</p>}
+
+                <h2 className="text-violet-700 mt-6 mb-2 font-bold text-xl">WhatsApp (com DDD):</h2>
                 <input
                     type="tel"
                     value={celular}
                     onChange={handleCelularChange}
                     placeholder="Digite seu WhatsApp"
-                    className="p-2 border border-gray-300 rounded-xl mb-4"
+                    className="p-2 border border-gray-300 rounded-xl w-64"
                     required
                 />
+                {errors.celular && <p className="text-red-500">{errors.celular}</p>}
 
             </div>
             <button onClick={handleSubmit} className="bg-yellow-500 text-violet-700 font-bold py-2 px-4 rounded-full mt-6">Quero fazer parte do Despertar 40+!</button>
