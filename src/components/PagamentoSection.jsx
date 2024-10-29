@@ -18,6 +18,10 @@ const PagamentoSection = () => {
         });
     }
 
+    const handleClickVoltar = () => {
+        setPixClicked(false);
+    }
+
     return (
         <div className="flex flex-col justify-center items-center md:mt-10 md:mb-10">
             <h1 className="text-4xl font-bold mb-10 text-violet-700">Quero meu corpo dos sonhos agora!</h1>
@@ -69,10 +73,16 @@ const PagamentoSection = () => {
                         {copySuccess && (
                             <p className="text-green-500 mt-2 text-lg font-semibold">{copySuccess}</p>
                         )}
+                        <button
+                            onClick={handleClickVoltar}
+                            className="mt-10 bg-violet-400 px-4 py-2 rounded-lg font-semibold text-xl"
+                        >
+                            Voltar
+                        </button>
                     </div>
                 )}
             </div>
-            <div className="text-2xl font-bold text-yellow-500 bg-purple-500 mt-8 px-3 rounded-xl" style={{ maxWidth: '900px' }}>
+            <div className="text-2xl font-bold text-yellow-500 bg-purple-500 mt-4 px-3 rounded-xl" style={{ maxWidth: '900px' }}>
                 <h3 className="mt-4">
                     Vamos juntas no Despertar 40+ onde você irá ampliar o seu conhecimento e tomar as rédeas da sua vida.
                 </h3>
