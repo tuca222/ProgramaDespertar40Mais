@@ -8,13 +8,13 @@ export default async function handler(req, res) {
             });
 
             // Verificar se a resposta é JSON
-            let data;
-            try {
-                data = await response.json();
-            } catch (jsonError) {
-                console.error('Resposta não JSON recebida:', jsonError);
-                return res.status(500).json({ error: 'Resposta inválida do Google Apps Script' });
-            }
+            // let data;
+            // try {
+            //     data = await response.json();
+            // } catch (jsonError) {
+            //     console.error('Resposta não JSON recebida:', jsonError);
+            //     return res.status(500).json({ error: 'Resposta inválida do Google Apps Script' });
+            // }
 
             res.status(200).json(data);
         } catch (error) {
