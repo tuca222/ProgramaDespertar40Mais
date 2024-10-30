@@ -55,15 +55,11 @@ const DadosSection = () => {
             console.log('Whatsapp enviado:', whatsapp);
             
             try {
-                const response = await fetch('https://script.google.com/macros/s/AKfycbzuFCU0ZivT7nlBJ2YQ7HYQPtXbkobQDU0ZJyzeyiFZmkilh6cpAS4juG3V64vlNPHuVQ/exec', {
+                const response = await fetch('/api/proxy', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ nomeCompleto, whatsapp })
-                });
-                
-                if (!response.ok) {
-                    throw new Error(`Erro ao enviar dados para o Google Script: ${response.status} - ${response.statusText}`);
-                }
+                  });                  
     
                 const data = await response.json();
                 console.log('Dados enviados com sucesso:', data.message);
