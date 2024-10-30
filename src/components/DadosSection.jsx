@@ -59,19 +59,16 @@ const DadosSection = () => {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ nomeCompleto, whatsapp })
-                });
-                
-                if (!response.ok) {
-                    console.warn('Erro ao enviar dados para o Google Apps Script');
-                    return; // interrompe o processo aqui se não for necessário mais nada
-                }
-            
+                  });                  
+    
                 const data = await response.json();
-                console.log('Dados enviados com sucesso:', data);
+                console.log('Dados enviados com sucesso:', data.message);
+
+                setShowPagamentoSection(true);
+                sectionRef.current.scrollIntoView({ behavior: 'smooth' });
             } catch (error) {
-                console.warn('Ocorreu um problema com o envio:', error);
+                console.error('Erro ao enviar os dados:', error);
             }
-            
         }
     };
 
