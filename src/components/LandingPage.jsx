@@ -80,33 +80,33 @@ const LandingPage = () => {
           <h2 className="text-3xl font-bold mb-10 text-violet-700">Benefícios que o Despertar 40+ trará para sua vida:</h2>
           <div className="flex flex-wrap justify-center gap-6 px-4">
             <div className="flex flex-col items-center mb-6">
-              <div className="px-5 py-4 rounded-lg shadow-lg border border-gray-500 h-72 w-56 flex flex-col items-center justify-center text-center">
+              <div className="px-5 py-4 rounded-lg shadow-lg border border-gray-500 h-72 w-72 flex flex-col items-center justify-center text-center">
                 <h3 className="text-xl font-semibold mb-2">Nutrição Consciente</h3>
-                <p className="text-gray-700">Descubra como se alimentar de forma equilibrada e inteligente, aprendendo sobre alimentação saudável e como fazer boas escolhas que beneficiam sua saúde a longo prazo.</p>
+                <p className="text-gray-700 mt-4">Descubra como se alimentar de forma equilibrada e inteligente, aprendendo sobre alimentação saudável e como fazer boas escolhas que beneficiam sua saúde a longo prazo.</p>
               </div>
             </div>
             <div className="flex flex-col items-center mb-6">
-              <div className="px-5 py-4 rounded-lg shadow-lg border border-gray-500 h-72 w-56 flex flex-col items-center justify-around text-center">
+              <div className="px-5 py-4 rounded-lg shadow-lg border border-gray-500 h-72 w-72 flex flex-col items-center justify-around text-center">
                 <h3 className="text-xl font-semibold">Melhora na Saúde</h3>
                 <p className="text-gray-700">Aumente sua disposição, fortaleça sua imunidade e sinta-se mais saudável todos os dias, melhorando sua qualidade de vida.</p>
               </div>
             </div>
             <div className="flex flex-col items-center mb-6">
-              <div className="px-5 py-4 rounded-lg shadow-lg border border-gray-500 h-72 w-56 flex flex-col items-center justify-around text-center">
-                <h3 className="text-xl font-semibold mb-2">Cardápios Semanais</h3>
+              <div className="px-5 py-4 rounded-lg shadow-lg border border-gray-500 h-72 w-72 flex flex-col items-center justify-around text-center">
+                <h3 className="text-xl font-semibold">Cardápios Semanais</h3>
                 <p className="text-gray-700">Receba orientações exclusivas ajudando você a atingir suas metas de forma eficaz, acompanhando minha rotina.</p>
               </div>
             </div>
             <div className="flex flex-col items-center mb-6">
-              <div className="px-5 py-4 rounded-lg shadow-lg border border-gray-500 h-72 w-56 flex flex-col items-center justify-around text-center">
-                <h3 className="text-xl font-semibold mb-2">Transformação Comportamental</h3>
+              <div className="px-5 py-4 rounded-lg shadow-lg border border-gray-500 h-72 w-72 flex flex-col items-center justify-around text-center">
+                <h3 className="text-xl font-semibold">Transformação Comportamental</h3>
                 <p className="text-gray-700">Desenvolva uma mentalidade positiva e hábitos saudáveis que impactam diretamente no seu bem-estar emocional e físico.</p>
               </div>
             </div>
             <div className="flex flex-col items-center mb-6">
-              <div className="px-5 py-4 rounded-lg shadow-lg border border-gray-500 h-72 w-56 flex flex-col items-center justify-center text-center">
+              <div className="px-5 py-4 rounded-lg shadow-lg border border-gray-500 h-72 w-72 flex flex-col items-center justify-center text-center">
                 <h3 className="text-xl font-semibold mb-2">Gestão de Organização e Planejamento</h3>
-                <p className="text-gray-700">Aprenda a organizar e planejar sua semana com facilidade, desde a alimentação até os exercícios, criando uma rotina que funcione para você.</p>
+                <p className="text-gray-700 mt-4">Aprenda a organizar e planejar sua semana com facilidade, desde a alimentação até os exercícios, criando uma rotina que funcione para você.</p>
               </div>
             </div>
           </div>

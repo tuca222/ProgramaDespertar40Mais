@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import PagamentoSection from "./PagamentoSection";
 
 const DadosSection = () => {
+    const [privacidadeExpanded, setPrivacidadeExpanded] = useState(false);
+    const [consenso, setConsenso] = useState(false);
     const [cadastrarClicked, setCadastrarClicked] = useState(false);
     const [nomeCompleto, setNomeCompleto] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
@@ -10,6 +12,16 @@ const DadosSection = () => {
     const [showPagamentoSection, setShowPagamentoSection] = useState(false);
 
     const sectionRef = useRef(null);
+
+    const privacidadeClickedExpand = (event) => {
+        event.stopPropagation()
+        setPrivacidadeExpanded(!privacidadeExpanded);
+    }
+
+    const handleConsenso = (event) => {
+        setConsenso(event.target.checked);
+        setErrors((prev) => ({ ...prev, consenso: '' }));
+    }
 
     const handleNomeCompletoChange = (event) => {
         const value = event.target.value;
@@ -51,6 +63,13 @@ const DadosSection = () => {
             setErrors((prev) => ({ ...prev, whatsapp: '' }));
         }
 
+        if (!consenso) {
+            setErrors((prev) => ({ ...prev, consenso: 'Você precisa concordar com a Política de Privacidade!' }));
+            valid = false;
+        } else {
+            setErrors((prev) => ({ ...prev, consenso: '' }));
+        }
+
         if (valid) {
             try {
                 setCadastrarClicked(true);
@@ -80,9 +99,62 @@ const DadosSection = () => {
 
     return (
         <div ref={sectionRef} className="flex flex-col justify-center items-center md:mt-2 md:mb-10">
-            <h1 className="text-3xl font-bold mb-10 text-violet-700">Quero meu corpo dos sonhos agora!</h1>
-            <div>
-                <h2 className="text-violet-700 mb-2 font-bold text-xl">Nome Completo:</h2>
+            <h1 className="text-3xl font-bold mb-6 text-violet-700">Quero meu corpo dos sonhos agora!</h1>
+
+            <div className="text-lg font-semibold text-gray-700" style={{ maxWidth: '600px'}}>
+                <h3>
+                    Falta pouco para você fazer parte do <span className="font-bold text-gray-900">Despertar 40+</span>!!
+                </h3>
+                <h3 className="mt-4">
+                    Precisamos de alguns dados seus para ajudar você a iniciar essa <span className="font-bold text-gray-800">jornada transformadora</span>.
+                </h3>
+                <h3 className="mt-4">
+                    Seus dados são coletados com o único propósito de facilitar nossa comunicação e somente membros da nossa equipe terão acesso a eles.
+                </h3>
+                <h3 className="mt-4 mb-4">
+                    Levamos sua privacidade e segurança a sério. Para saber mais sobre nossa{' '}
+                    <span className="text-violet-700 cursor-pointer font-bold"
+                    >
+                        Política de Privacidade{' '}
+                    <span
+                        onClick={privacidadeClickedExpand}
+                        className="underline decoration-violet-700 cursor-pointer"
+                    >
+                        clique aqui!
+                    </span>
+                    </span>
+                </h3>
+                {privacidadeExpanded && (
+                    <div className="mt-4 p-4 mb-4 bg-gray-100 text-gray-700 rounded-lg">
+                        <h3 className="text-violet-700 font-bold">
+                            Nossa Política de Privacidade:
+                        </h3>
+                        <p className="mt-2">
+                            Seus dados serão utilizados exclusivamente para melhorar nossa comunicação e aprimorar a experiência do programa <strong>Despertar 40+</strong>.
+                        </p>
+                        <p className="mt-2">
+                            Os dados coletados serão utilizados exclusivamente pela nossa equipe para o contato direto com você via WhatsApp, garantindo a inclusão no grupo exclusivo do programa. Em hipótese alguma, seus dados serão vendidos, compartilhados ou divulgados para terceiros fora da nossa equipe.
+                        </p>
+                        <p className="mt-2">
+                            Nos comprometemos a protegê-los e medidas de segurança adequadas foram implementadas para mantê-los seguro.
+                        </p>
+                        <p className="mt-2 text-violet-700">
+                            Se você ficou com alguma dúvida sobre nossa Política de Privacidade, entre em contato conosco pelo{' '}
+                            <a 
+                                href="https://wa.me/5548999694084?text=Oi,%20fiquei%20com%20dúvida%20na%20Política%20de%20Privacidade%20do%20Despertar%2040%2B"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-green-600 underline"
+                            >
+                                WhatsApp
+                            </a>.
+                        </p>
+                    </div>
+                )}
+            </div>
+
+            <form className="flex flex-col justify-center items-center">
+                <label className="text-violet-700 mb-2 font-bold text-xl mr-2">Nome Completo:</label>
                 <input
                     id="nomeCompleto"
                     type="text"
@@ -93,9 +165,9 @@ const DadosSection = () => {
                     minLength={8}
                     required
                 />
-                {errors.nomeCompleto && <p className="text-red-500">{errors.nomeCompleto}</p>}
+                {errors.nomeCompleto && <p className="text-red-500  min-h-[1rem]">{errors.nomeCompleto}</p>}
 
-                <h2 className="text-violet-700 mt-6 mb-2 font-bold text-xl">WhatsApp (com DDD):</h2>
+                <label className="text-violet-700 mt-6 mb-2 font-bold text-xl mr-2">WhatsApp (com DDD):</label>
                 <input
                     id="whatsapp"
                     type="tel"
@@ -107,9 +179,21 @@ const DadosSection = () => {
                 />
                 {errors.whatsapp && <p className="text-red-500">{errors.whatsapp}</p>}
 
-            </div>
+            </form>
             {!cadastrarClicked && (
                 <>
+                    <div className="mt-4 ml-4">
+                        <input
+                            id="consenso"
+                            type="checkbox"
+                            checked={consenso}
+                            onChange={handleConsenso}
+                        />
+                        <label htmlFor="consenso" className="text-gray-800 ml-2">
+                            Estou de acordo com a Política de Privacidade!
+                        </label>
+                        {errors.consenso && <p className="text-red-500">{errors.consenso}</p>}
+                    </div>
                     <button 
                         onClick={handleSubmit} 
                         className="bg-yellow-500 text-violet-700 font-bold py-2 px-4 rounded-full mt-6">
@@ -130,10 +214,10 @@ const DadosSection = () => {
                 <div className="font-bold text-xl md:text-2xl">
                     <p className="mt-5 mb-4">R$ 197,00 à vista (no Pix ou no Cartão)</p>
                     <p className="mb-4">ou até</p>
-                    <p className="mb-4">6x de R$ 40,00</p>
+                    <p>6x de R$ 40,00</p>
                 </div>
             </div>
-            <div className="text-2xl font-bold text-yellow-500 bg-purple-500 mt-8 px-3 rounded-xl" style={{ maxWidth: '900px' }}>
+            <div className="text-2xl font-bold text-yellow-500 bg-purple-500 px-3 rounded-xl" style={{ maxWidth: '900px' }}>
                 <h3 className="mt-4">
                     Vamos juntas no Despertar 40+ onde você irá ampliar o seu conhecimento e tomar as rédeas da sua vida.
                 </h3>

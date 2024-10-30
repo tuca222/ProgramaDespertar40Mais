@@ -11,10 +11,9 @@ const VideoExplicativo = () => {
     
             if (largura < 830) {
                 // setIframeSrc("https://www.youtube.com/embed/H-rY0cDLt8Y");
-                setIframeSrc("https://www.youtube.com/embed/xIOYGxVYDog")
-                setDivStyle({ aspectRatio: '1080 / 1920' });
-                //setIframeStyle({ maxHeight: '700px' });
-                setIframeStyle({ minHeight: '600px', minWidth: '400px' });
+                setIframeSrc("https://www.youtube.com/embed/xIOYGxVYDog");
+                setDivStyle({ minHeight: '600px', minWidth: '400px' });
+                setIframeStyle({ minHeight: '600px', minWidth: '200px' });
             } else {
                 setIframeSrc("https://www.youtube.com/embed/rA5LzydX1lE");
                 setDivStyle({ maxHeight: '600px' });
@@ -42,7 +41,7 @@ const VideoExplicativo = () => {
                 id="iframe-responsivo"
                 title="Despertar 40+ - Vídeo Explicativo"
                 src={iframeSrc}
-                className="h-full rounded-lg shadow-lg object-cover w-full max-w-sm md:max-w-lg mx-auto"
+                className="flex justify-center h-full rounded-lg shadow-lg object-cover "
                 style={iframeStyle} 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

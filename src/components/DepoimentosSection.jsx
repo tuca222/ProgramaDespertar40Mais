@@ -1,15 +1,51 @@
 import React from 'react';
-import PacienteSilvana from '../assets/pacientes/Silvana.jpg';
 import PacienteLuciana from '../assets/pacientes/Luciana.png';
 import PacienteGuilherme from '../assets/pacientes/Guilherme.png';
+import PacienteSilvana from '../assets/pacientes/Silvana.jpg';
 import PacienteMaria from '../assets/pacientes/Maria.png';
+import PacienteKarla from '../assets/pacientes/Karla.jpg';
+import PacienteMiriam from '../assets/pacientes/Miriam.jpg';
+import PacienteThaisa from '../assets/pacientes/Thaisa.png';
 
 const DepoimentosSection = ({ id }) => {
   return (
     <section id={id} className="">
       <div className="text-center">
         <h2 className="text-3xl font-bold mb-8 text-violet-700">Depoimentos de Pacientes</h2>
-        <div className="flex flex-wrap gap-5 justify-center items-start">
+        <div className="flex flex-wrap gap-5 justify-center items-center">          
+          <div className='flex flex-col md:gap-20 gap-5'>
+            <div className="bg-lightGreen p-2 rounded-lg shadow-lg flex flex-col h-auto w-72 ml-4 mr-4">
+              <p className="text-gray-700 italic">
+                "Valeu Ge, valeu muito a pena investir na minha saúde e no cuidado com a minha alimentação. Juntando a atividade física então, nem se fala… já 
+                me sinto muito melhor mesmo. E eu adoro o seu jeito leve e descomplicado, fez tudo ficar muito mais fácil de aplicar e seguir. Você é fera!!! 🤩🙏🏽🙏🏽"
+              </p>
+              <div className="flex flex-row justify-center items-center mt-4">
+                <img
+                  src={PacienteGuilherme}
+                  alt="Icone Guilherme"
+                  className="w-12 h-12 rounded-full ml-4 mr-4"
+                  style={{ filter: 'blur(3px)' }}
+                />
+                <p className="mt-4 font-semibold">- Guilherme Machado</p>
+              </div>
+            </div>
+            <div className="bg-lightGreen p-2 rounded-lg shadow-lg flex flex-col h-auto w-72 ml-4 mr-4">
+              <p className="text-gray-700 italic">
+                "Boa tarde! Estou melhor, você me ajudou muito, nessa última consulta foi muito gratificante. Pois você mostrou que posso emagrecer, dependendo de altos e baixos. Todos temos isso, 
+                então é só seguir meta, seguindo com alimentação,, seguindo com treinos, até sono está melhor 🥰"
+              </p>
+              <div className="flex flex-row justify-center items-center mt-4">
+                <img
+                  src={PacienteKarla}
+                  alt="Icone Karla"
+                  className="w-12 h-12 rounded-full ml-4 mr-4"
+                  style={{ filter: 'blur(3px)' }}
+                />
+                <p className="mt-4 font-semibold">- Karla Fernandes</p>
+              </div>
+            </div>
+          </div>
+
           <div className="bg-lightGreen p-2 rounded-lg shadow-lg flex flex-col h-auto w-72 ml-4 mr-4">
             <p className="text-gray-700 italic">
               Bom dia, Gerusa. Ontem quando nos falamos eu estava indo dormir, acabei não te dizendo o quanto eu estou curtindo esse processo. 
@@ -24,29 +60,13 @@ const DepoimentosSection = ({ id }) => {
               <img 
                 src={PacienteLuciana}
                 alt="Icone Luciana"
-                className="w-12 h-12 rounded-full ml-4 mr-4"
-                style={{ filter: 'blur(1px)' }}
+                className="w-13 h-12 rounded-full ml-4 mr-2"
+                style={{ filter: 'blur(3px)' }}
               />
               <p className="mt-4 font-semibold">- Luciana Brasil</p>
             </div>
           </div>
-
-          <div className="bg-lightGreen p-2 rounded-lg shadow-lg flex flex-col h-auto w-72 ml-4 mr-4">
-            <p className="text-gray-700 italic">
-              "Valeu Ge, valeu muito a pena investir na minha saúde e no cuidado com a minha alimentação. Juntando a atividade física então, nem se fala… já 
-              me sinto muito melhor mesmo. E eu adoro o seu jeito leve e descomplicado, fez tudo ficar muito mais fácil de aplicar e seguir. Você é fera!!! 🤩🙏🏽🙏🏽"
-            </p>
-            <div className="flex flex-row justify-center items-center mt-4">
-              <img
-                src={PacienteGuilherme}
-                alt="Icone Guilherme"
-                className="w-12 h-12 rounded-full ml-4 mr-4"
-                style={{ filter: 'blur(1px)' }}
-              />
-              <p className="mt-4 font-semibold">- Guilherme Machado</p>
-            </div>
-          </div>
-
+          
           <div className="bg-lightGreen p-2 rounded-lg shadow-lg flex flex-col h-auto w-72 ml-4 mr-4">
             <p className="text-gray-700 italic">
               "Ge, desde Julho de 2020 quando você fez a minha reeducação alimentar, pois não conseguia baixar meu triglicerídeo e colesterol, com 49 anos de idade, que meu modo de me alimentar 
@@ -59,38 +79,57 @@ const DepoimentosSection = ({ id }) => {
                 src={PacienteSilvana} 
                 alt="Icone Silvana" 
                 className="w-12 h-12 rounded-full ml-4 mr-4" 
-                style={{ filter: 'blur(1px)' }}
+                style={{ filter: 'blur(3px)' }}
               />
               <p className="mt-4 font-semibold">- Silvana Cecília Beber</p>
             </div>
           </div>
 
+          <div className='flex flex-col md:gap-20 gap-5'>
           <div className="bg-lightGreen p-2 rounded-lg shadow-lg flex flex-col h-auto w-72 ml-4 mr-4">
-            <p className="text-gray-700 italic">
-              "Bom diaaa vou tentar bater a foto de biquíni hj mas to bem mais sequinha na barriga é perceptível 🫠🙃 tudo isso devo a ti. Me sinto mais bonita e minha auto estima está mtmt melhor,
-              não só pela estética mas por saber que consigo me cuidar, comer bem, saudável, com limites sem precisar descontar minhas emoções na alimentação. E vc me inspira mto ♥️♥️♥️ só agradeço por ter te encontrado!🥰"
-            </p>
-            <div className="flex flex-row justify-center items-center mt-4">
-              <img
-                src={PacienteMaria}
-                alt="Icone Maria"
-                className="w-12 h-12 rounded-full ml-4 mr-4"
-                style={{ filter: 'blur(1px)' }}
-              />
-              <p className="mt-4 font-semibold">- Maria Lygia</p>
+              <p className="text-gray-700 italic">
+                "Agradeço muito a você pela atenção e ajuda a conseguir meus objetivos."
+              </p>
+              <div className="flex flex-row justify-center items-center">
+                <img
+                  src={PacienteThaisa}
+                  alt="Icone Thaisa"
+                  className="w-12 h-13 rounded-full ml-4 mr-4"
+                  style={{ filter: 'blur(3px)' }}
+                />
+                <p className="mt-4 font-semibold">- Thaisa Cardoso</p>
+              </div>
             </div>
-          </div>
-
-          <div className="bg-lightGreen p-2 rounded-lg shadow-lg flex flex-col h-auto w-72 ml-4 mr-4">
-            <p className="text-gray-700 italic">
-              "Boa tarde! Estou melhor, você me ajudou muito, nessa última consulta foi muito gratificante. Pois você mostrou que posso emagrecer, dependendo de altos e baixos. Todos temos isso, 
-              então é só seguir meta, seguindo com alimentação,, seguindo com treinos, até sono está melhor 🥰"
-            </p>
-            <div className="flex flex-row justify-center items-center mt-4">
-              <img src="https://via.placeholder.com/50" alt="User Icon" className="w-12 h-12 rounded-full ml-4 mr-4" />
-              <p className="mt-4 font-semibold">- Karla Fernandes</p>
+            <div className="bg-lightGreen p-2 rounded-lg shadow-lg flex flex-col h-auto w-72 ml-4 mr-4">
+              <p className="text-gray-700 italic">
+                "Bom diaaa vou tentar bater a foto de biquíni hj mas to bem mais sequinha na barriga é perceptível 🫠🙃 tudo isso devo a ti. Me sinto mais bonita e minha auto estima está mtmt melhor,
+                não só pela estética mas por saber que consigo me cuidar, comer bem, saudável, com limites sem precisar descontar minhas emoções na alimentação. E vc me inspira mto ♥️♥️♥️ só agradeço por ter te encontrado!🥰"
+              </p>
+              <div className="flex flex-row justify-center items-center mt-4">
+                <img
+                  src={PacienteMaria}
+                  alt="Icone Maria"
+                  className="w-12 h-12 rounded-full ml-4 mr-4"
+                  style={{ filter: 'blur(3px)' }}
+                />
+                <p className="mt-4 font-semibold">- Maria Lygia</p>
+              </div>
             </div>
-          </div>
+            <div className="bg-lightGreen p-2 rounded-lg shadow-lg flex flex-col h-auto w-72 ml-4 mr-4">
+              <p className="text-gray-700 italic">
+                "Obrigada por estar deixando a minha vida mais leve."
+              </p>
+              <div className="flex flex-row justify-center items-center mt-4">
+                <img
+                  src={PacienteMiriam}
+                  alt="Icone Miriam"
+                  className="w-12 h-12 rounded-full ml-4 mr-4"
+                  style={{ filter: 'blur(3px)' }}
+                />
+                <p className="mt-4 font-semibold">- Miriam Cardoso</p>
+              </div>
+            </div>
+          </div>          
         </div>
       </div>
     </section>
