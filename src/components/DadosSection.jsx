@@ -121,7 +121,7 @@ const DadosSection = () => {
                 <>
                     <div
                         className="h-12 w-12 border-4 border-t-white  border-b-white  border-l-white border-r-purple-400 
-                                animate-spin rounded-full ease-linear">
+                                animate-spin rounded-full ease-linear mt-6">
                     </div>
                 </>
             )}
