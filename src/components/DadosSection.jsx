@@ -130,7 +130,7 @@ const DadosSection = () => {
                             Nossa Política de Privacidade:
                         </h3>
                         <p className="mt-2">
-                            Seus dados serão utilizados exclusivamente para melhorar nossa comunicação e aprimorar a experiência do programa <strong>Despertar 40+</strong>.
+                            Seus dados serão utilizados exclusivamente para melhorar nossa comunicação e facilitar a sua inclusão no programa <strong>Despertar 40+</strong>.
                         </p>
                         <p className="mt-2">
                             Os dados coletados serão utilizados exclusivamente pela nossa equipe para o contato direto com você via WhatsApp, garantindo a inclusão no grupo exclusivo do programa. Em hipótese alguma, seus dados serão vendidos, compartilhados ou divulgados para terceiros fora da nossa equipe.
