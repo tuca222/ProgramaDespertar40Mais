@@ -8,8 +8,16 @@ export default async function handler(req, res) {
                 body: JSON.stringify(req.body)
             });
 
-            const data = await response.json(); // Verifica a resposta do Google Apps Script
-            res.status(200).json(data); // Retorna a resposta para o cliente
+            // Verifique o tipo de resposta
+            const contentType = response.headers.get("content-type");
+            if (contentType && contentType.includes("application/json")) {
+                const data = await response.json();
+                res.status(200).json(data);
+            } else {
+                const text = await response.text();
+                console.error("Resposta não JSON recebida:", text); // Log para identificar o conteúdo da resposta
+                res.status(500).json({ error: 'Resposta do Google Apps Script não é JSON', details: text });
+            }
         } catch (error) {
             console.error("Erro ao comunicar com o Google Apps Script:", error);
             res.status(500).json({ error: 'Erro ao comunicar com o Google Apps Script' });
