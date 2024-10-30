@@ -32,6 +32,14 @@
   background: linear-gradient(to right, rgba(111, 45, 168, 0.70), rgba(175, 135, 5, 0.65));
 }
 
+.bg-gradient-r-praquemeh {
+  background: linear-gradient(to right, rgba(176, 113, 231, 0.85), rgba(235, 182, 6, 0.65));
+}
+
+.bg-gradient-r-valor {
+  background: linear-gradient(to right, rgba(235, 182, 6, 0.65), rgba(176, 113, 231, 0.85));
+}
+
 .bg-video-r-purple-yellow-opacity {
   background: linear-gradient(to right, rgba(108, 40, 217, 0.628), rgba(111, 45, 168, 0.70), rgba(202, 139, 4, 0.477));
 }

@@ -62,7 +62,7 @@ const LandingPage = () => {
       </section>
 
       {/* O que é o Programa */}
-      <section id="sobre-o-programa" className=" bg-gradient-r-purple-yellow-opacity px-4">
+      <section id="sobre-o-programa" className="bg-gradient-r-purple-yellow-opacity px-4">
         <div className="flex flex-col justify-center items-center max-w-4xl mx-auto font-semibold">
           <h2 className="text-3xl font-bold mt-8 mb-8 text-violet-700 text-center">O Que é o Despertar 40+?</h2>
           <p className="text-lg text-gray-700 mb-5">
@@ -121,7 +121,7 @@ const LandingPage = () => {
       </section>      
       
       {/* Pra quem é? */}
-      <section id='pra-quem' className="py-10 bg-orange-100 px-4 shadow-2xl">
+      <section id='pra-quem' className="py-10 bg-gradient-r-praquemeh px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-violet-700 text-center">Pra quem é o Despertar 40+?</h2>
           <p className="text-lg text-gray-700">
@@ -156,7 +156,7 @@ const LandingPage = () => {
       </section>
 
       {/* Entregáveis */}
-      <section id="materiais" className="bg-gradient-to-r from-indigo-500 via-yellow-300 to-indigo-500 py-10 shadow-2xl">
+      <section id="materiais" className="bg-gradient-to-r from-purple-400 via-yellow-300 to-purple-400 py-10">
         <div className="flex flex-col justify-center items-center mx-auto max-w-6xl px-4">
           <h2 className="text-3xl font-bold mb-8 text-violet-700 text-center">O Que Você Vai Receber?</h2>
           <div className="flex justify-center w-full px-4">
@@ -179,7 +179,7 @@ const LandingPage = () => {
       </section>
 
       {/* Preço */}
-      <section id='preco' className="bg-orange-100 px-4 py-8 shadow-2xl">
+      <section id='preco' className="bg-gradient-r-valor px-4 py-8">
         <PrecoSection />
       </section>
 
