@@ -50,10 +50,7 @@ const DadosSection = () => {
             setErrors((prev) => ({ ...prev, whatsapp: '' })); 
         }       
 
-        if (valid) {
-            console.log('Nome Completo enviado:', nomeCompleto);
-            console.log('Whatsapp enviado:', whatsapp);
-            
+        if (valid) {            
             try {
                 const response = await fetch('/api/proxy', {
                     method: 'POST',

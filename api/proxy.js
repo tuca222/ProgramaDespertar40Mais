@@ -16,7 +16,7 @@ export default async function handler(req, res) {
             //     return res.status(500).json({ error: 'Resposta inválida do Google Apps Script' });
             // }
 
-            res.status(200).json(data);
+            res.status(200).json({"Message": "Escreveu na planilha!"});
         } catch (error) {
             console.error('Erro ao comunicar com o Google Apps Script:', error);
             res.status(500).json({ error: 'Erro ao comunicar com o Google Apps Script' });
