@@ -1,4 +1,7 @@
 import React from 'react';
+import PsicologaFlavia from '../assets/profissionais/PsicologaFlavia.png';
+import NutricionistaGerusa from '../assets/profissionais/NutricionistaGerusa.png';
+import GinecologistaGeane from '../assets/profissionais/GinecologistaGeane.png';
 
 const ProgramaSection = ({ id }) => {
   return (
@@ -29,8 +32,23 @@ const ProgramaSection = ({ id }) => {
               <li>Plano Alimentar e Primeiros Passos</li>
               <li>Controle Diário e Suporte</li>
               <li>Como Montar um Prato Saudável</li>
-              <li>Live Inicial: Boas-Vindas e Converssa com Psicóloga</li>
+              <li>Live Inicial: Boas-Vindas e Conversa com a <span className='text-violet-700 font-semibold'>Psicóloga Flávia Bez Lopes</span></li>
             </ul>
+            <div className="flex flex-row justify-center items-center mt-4 gap-2 sm:mr-10 sm:gap-5">
+              <img 
+                src={PsicologaFlavia}
+                alt="Icone Flávia"
+                className="h-28 sm:h-36 object-cover rounded-full sm:ml-9"
+              />
+               <a 
+                href="https://www.instagram.com/flavialopespsicologa" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-violet-700 font-semibold text-sm sm:text-base"
+                    >
+                        @flavialopespsicologa
+              </a>
+            </div>
           </div>
 
           {/* 2ª Semana */}
@@ -50,7 +68,23 @@ const ProgramaSection = ({ id }) => {
               <li>Dicas para Refeições Livres com Consciência</li>
               <li>Consumo de Álcool: Moderação e Controle de Calorias</li>
               <li>Controle Diário e Suporte</li>
+              <li>Live sobre instestino comigo, a <span className='text-violet-700 font-semibold'>Nutricionista Gerusa Lorenzetti</span></li>
             </ul>
+            <div className="flex flex-row justify-center items-center mt-4 gap-2 sm:mr-10 sm:gap-5">
+              <img 
+                src={NutricionistaGerusa}
+                alt="Icone Gerusa"
+                className="h-28 sm:h-36 object-cover rounded-full sm:ml-9"
+              />
+               <a 
+                href="https://www.instagram.com/nutrigerusa" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-violet-700 font-semibold text-sm sm:text-base"
+                    >
+                        @nutrigerusa
+              </a>
+            </div>
           </div>
 
           {/* 3ª Semana */}
@@ -62,12 +96,27 @@ const ProgramaSection = ({ id }) => {
             <ul className="list-disc text-left pl-10 text-lg mt-5 text-gray-700 space-y-4">
               <li>Controle do estresse</li>
               <li>Sintomas da TPM e endometriose</li>
-              <li>Live com médica ginecologista</li>
               <li>Menopausa e envelhecimento feminino</li>
               <li>Prevenção e controle de osteoporose e osteopenia</li>
               <li>A importância da alimentação durante a menopausa</li>
               <li>Longevidade</li>
+              <li>Live com médica a <span className='text-violet-700 font-semibold'>Ginecologista Geane Garlet</span></li>
             </ul>
+            <div className="flex flex-row justify-center items-center mt-4 gap-2 sm:mr-10 sm:gap-5">
+              <img 
+                src={GinecologistaGeane}
+                alt="Icone Geane"
+                className="h-28 sm:h-36 object-cover rounded-full sm:ml-9"
+              />
+               <a 
+                href="https://www.instagram.com/geanegarlet" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-violet-700 font-semibold text-sm sm:text-base"
+                    >
+                        @geanegarlet
+              </a>
+            </div>
           </div>
           
 
@@ -84,8 +133,8 @@ const ProgramaSection = ({ id }) => {
               <li>Como treinar de forma eficiente aos finais de semana</li>
               <li>Estratégias para resistir ao álcool</li>
               <li>Como encontrar prazeres além da comida</li>
-              <li>Live com personal trainer</li>
               <li>Controle Diário e Suporte</li>
+              <li>Live com <span className='text-violet-700 font-semibold'>Personal Trainer</span></li>
             </ul>
           </div>
         </div>

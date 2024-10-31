@@ -29,7 +29,7 @@ const LandingPage = () => {
       </header>
 
       {/* Intro */}
-      <section className="bg-gradient-r-purple-yellow flex flex-col lg:flex-row justify-center items-center gap-3 text-center px-6 md:px-20 shadow-2xl" style={{ height: 'auto' }}>
+      <section className="bg-gradient-r-purple-yellow flex flex-col lg:flex-row justify-center items-center gap-3 text-center px-6 md:px-20" style={{ height: 'auto' }}>
         <div className='flex flex-col mt-3'>
           <h1 className="text-5xl md:text-5xl font-bold mt-6 mb-6 text-yellow-600">Despertar 40+</h1>
           <p className="text-lg md:text-lg mt-2 mb-2 text-white max-w-sm">
@@ -54,9 +54,9 @@ const LandingPage = () => {
       </section>
 
       {/* Vídeo Explicativo */}
-      <section id="video-explicativo" className="py-2 bg-video-r-purple-yellow-opacity shadow-2xl">
+      <section id="video-explicativo" className="py-2 bg-gradient-r-purple-yellow">
         <div className="flex flex-col justify-center items-center gap-6 py-4 px-4 max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-violet-700">Assista ao Vídeo Explicativo do Despertar 40+</h2>
+          <h2 className="text-3xl font-bold text-yellow-600 ">Assista ao Vídeo Explicativo do Despertar 40+</h2>
           <VideoExplicativo />
         </div>
       </section>
@@ -75,7 +75,7 @@ const LandingPage = () => {
       </section>
 
       {/* Benefícios */}
-      <section className="flex flex-col justify-center items-center py-12 bg-gradient-r-purple-yellow-opacity">
+      <section className="flex flex-col justify-center items-center py-12 px-4 bg-gradient-r-purple-yellow-opacity">
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-10 text-violet-700">Benefícios que o Despertar 40+ trará para sua vida:</h2>
           <div className="flex flex-wrap justify-center gap-6 px-4">
@@ -169,7 +169,7 @@ const LandingPage = () => {
               <li>Guia Intestino Feliz</li>
               <li>Estratégias Nutricionais e Comportamentais</li>
               <li>Ebook Com Receitas Saudáveis e Exclusivas</li>
-              <li>Ebook Com Estratégias para Aproveitar o Findi</li>
+              <li>Ebook Com Estratégias para Aproveitar o Final de Semana</li>
               <li>Ebook Entrando na Menopausa</li>
               <li>Plano Alimentar Semanal</li>
               <li>Manual de Organização e Planejamento</li>
