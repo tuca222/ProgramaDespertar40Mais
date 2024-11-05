@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import '../App.css';
 import DespertarInicioImg from '../assets/Despertar40+Inicio.png';
 import ProgramaSection from './ProgramaSection';
@@ -9,8 +9,28 @@ import FaqSection from './FaqSection';
 import DepoimentosSection from './DepoimentosSection';
 import PrecoSection from './PrecoSection';
 import VideoExplicativo from './VideoExplicativo';
+import DadosSection from './DadosSection';
+
 
 const LandingPage = () => {
+  const [showDadosSection, setShowDadosSection] = useState(false)
+  
+  const dadosSectionRef = useRef(null);
+
+  const handleOnClickGarantaSuaVaga = () => {
+    const sectionPreco = document.getElementById('garanta-sua-vaga');
+    if (sectionPreco) {
+      sectionPreco.scrollIntoView({ behavior: 'smooth' });
+        
+       setTimeout(() => {
+         setShowDadosSection(true);
+        if (dadosSectionRef.current) {
+          dadosSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 1); 
+    }
+  };  
+
   return (
     <div className="font-sans">
       {/* Cabeçalho */}
@@ -179,10 +199,17 @@ const LandingPage = () => {
       </section>
 
       {/* Preço */}
-      <section id='garanta-sua-vaga' className="bg-gradient-r-valor px-4 py-8">
-        <PrecoSection />
+      <section  id='garanta-sua-vaga' className="bg-gradient-r-valor px-4 py-8">
+        {!showDadosSection && (
+          <PrecoSection />
+        )}
+        {showDadosSection && (
+          <div ref={dadosSectionRef}>
+            <DadosSection />
+          </div>
+        )}
       </section>
-
+ 
       {/* Depoimentos */}
       <section className="py-10 bg-white shadow-2xl">
         <DepoimentosSection id="depoimentos" />
@@ -202,12 +229,12 @@ const LandingPage = () => {
             />
           </div>
           <div className="w-full lg:w-1/2 flex flex-col items-center justify-between lg:gap-32  gap-10 px-2">
-            <a
-              href="#garanta-sua-vaga"
+            <button
+              onClick={handleOnClickGarantaSuaVaga}
               className="bg-yellow-600 hover:bg-yellow-700 text-violet-700 font-bold text-lg md:text-xl py-2 px-9 md:py-5 mt-5 rounded-full transition duration-300 breathing"
             >
               Garanta sua vaga!
-            </a>
+            </button>
             
             <FaqSection />
             
@@ -265,12 +292,12 @@ const LandingPage = () => {
                 </video>
             </div> */}
 
-            <a
-              href="#garanta-sua-vaga"
+            <button
+              onClick={handleOnClickGarantaSuaVaga}
               className="bg-yellow-600 hover:bg-yellow-700 text-violet-700 font-bold text-lg md:text-xl py-2 px-9 md:py-5 mt-5 rounded-full transition duration-300 breathing"
             >
-              Garanta sua vaga!
-            </a>
+              Faça parte do Despertar 40+!
+            </button>
             
             <div className="mb-6 md:mb-3 py-3">
               <img
