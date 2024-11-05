@@ -16,7 +16,7 @@ const FaqSection = () => {
     },
     {
       question: 'Quando é o início do programa e qual a sua duração?',
-      answer: 'O programa inicia oficialmente no dia 11 de novembro de 2024 e tem duração de 4 semanas. Sendo do dia 11/11/2024 a 09/12/2024 com nossa Live de encerramento.',
+      answer: 'O programa inicia oficialmente no dia 11 de novembro de 2024 e tem duração de 4 semanas. Sendo do dia 11/11/2024 a 08/12/2024 e 09/12/2024 teremos nossa Live de encerramento.',
     },
     {
       question: 'Como funciona o acompanhamento?',

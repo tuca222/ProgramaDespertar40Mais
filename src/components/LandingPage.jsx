@@ -179,7 +179,7 @@ const LandingPage = () => {
       </section>
 
       {/* Preço */}
-      <section id='preco' className="bg-gradient-r-valor px-4 py-8">
+      <section id='garanta-sua-vaga' className="bg-gradient-r-valor px-4 py-8">
         <PrecoSection />
       </section>
 
@@ -188,7 +188,7 @@ const LandingPage = () => {
         <DepoimentosSection id="depoimentos" />
       </section>
 
-      {/* FAQ e Botões */}
+      {/* FAQ e Botão */}
       <section className='flex flex-col bg-violet-200 justify-between gap-8 p-4 md:p-8 shadow-2xl'>  
         <div className="w-full flex flex-col lg:flex-row items-center lg:justify-center gap-8">
           <div className="w-full lg:w-1/2 flex flex-col items-center">
@@ -201,9 +201,20 @@ const LandingPage = () => {
               className="rounded-lg shadow-lg object-cover w-full max-w-sm md:max-w-lg mx-auto"
             />
           </div>
-          <div className="w-full lg:w-1/2 flex flex-col items-center lg:justify-center px-2">
+          <div className="w-full lg:w-1/2 flex flex-col items-center justify-between lg:gap-32  gap-10 px-2">
+            <a
+              href="#garanta-sua-vaga"
+              className="bg-yellow-600 hover:bg-yellow-700 text-violet-700 font-bold text-lg md:text-xl py-2 px-9 md:py-5 mt-5 rounded-full transition duration-300 breathing"
+            >
+              Garanta sua vaga!
+            </a>
+            
             <FaqSection />
+            
           </div>
+          
+            
+          
         </div>
       </section>
 
@@ -242,7 +253,7 @@ const LandingPage = () => {
       {/* Um Pouco Mais Sobre Minha História */}
       <section className="bg-cyan-200 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-end gap-5">
+          <div className="max-w-4xl mx-auto flex flex-col justify-center items-center md:items-center gap-5">
             {/* <div className="flex justify-center relative mt-6 mb-6" style={{ aspectRatio: '1080 / 1920' }}>
                 <video
                   className="h-full rounded-lg shadow-lg object-cover w-full max-w-sm md:max-w-lg mx-auto"
@@ -253,6 +264,14 @@ const LandingPage = () => {
                   Seu navegador não suporta a tag de vídeo.
                 </video>
             </div> */}
+
+            <a
+              href="#garanta-sua-vaga"
+              className="bg-yellow-600 hover:bg-yellow-700 text-violet-700 font-bold text-lg md:text-xl py-2 px-9 md:py-5 mt-5 rounded-full transition duration-300 breathing"
+            >
+              Garanta sua vaga!
+            </a>
+            
             <div className="mb-6 md:mb-3 py-3">
               <img
                 src={MaisSobreMimImg}
@@ -260,6 +279,7 @@ const LandingPage = () => {
                 className="rounded-lg shadow-lg object-cover w-full max-w-sm md:max-w-lg mx-auto"
               />
             </div>
+            
           </div>
         </div>
       </section>
