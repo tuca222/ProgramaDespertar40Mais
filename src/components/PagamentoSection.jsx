@@ -10,7 +10,7 @@ const PagamentoSection = () => {
     }
 
     const handleCopyToClipboard = () => {
-        const pixKey = "00020101021226860014BR.GOV.BCB.PIX2564qrpix.bradesco.com.br/qr/v2/1271bdc3-6bd4-41aa-b866-4c206212efaa5204000053039865406197.005802BR5925GERUSA LORENZETTI DA ROSA6013FLORIANOPOLIS62070503***6304AC05";
+        const pixKey = "00020101021226860014BR.GOV.BCB.PIX2564qrpix.bradesco.com.br/qr/v2/1774a35b-d13a-410f-8a31-6b29d5d6d8835204000053039865406197.005802BR5925GERUSA LORENZETTI DA ROSA6013FLORIANOPOLIS62070503***63047EF4";
         navigator.clipboard.writeText(pixKey).then(() => {
             setCopySuccess('Chave PIX copiada!');
             setTimeout(() => setCopySuccess(''), 2000);
