@@ -10,7 +10,7 @@ const PagamentoSection = () => {
     }
 
     const handleCopyToClipboard = () => {
-        const pixKey = "00020101021226860014BR.GOV.BCB.PIX2564qrpix.bradesco.com.br/qr/v2/1774a35b-d13a-410f-8a31-6b29d5d6d8835204000053039865406197.005802BR5925GERUSA LORENZETTI DA ROSA6013FLORIANOPOLIS62070503***63047EF4";
+        const pixKey = "00020101021226860014BR.GOV.BCB.PIX2564qrpix.bradesco.com.br/qr/v2/ae0c8929-dd2f-4b72-934b-f7cebc8938255204000053039865406197.005802BR5925GERUSA LORENZETTI DA ROSA6013FLORIANOPOLIS62070503***6304C531";
         navigator.clipboard.writeText(pixKey).then(() => {
             setCopySuccess('Chave PIX copiada!');
             setTimeout(() => setCopySuccess(''), 2000);
@@ -92,7 +92,7 @@ const PagamentoSection = () => {
                             className="font-semibold mt-4 break-all border-2 rounded-lg px-2 py-2 border-violet-700 bg-orange-200 text-gray-800 cursor-pointer"
                             onClick={handleCopyToClipboard}
                         >
-                            00020101021226860014BR.GOV.BCB.PIX2564qrpix.bradesco.com.br/qr/v2/1774a35b-d13a-410f-8a31-6b29d5d6d8835204000053039865406197.005802BR5925GERUSA LORENZETTI DA ROSA6013FLORIANOPOLIS62070503***63047EF4
+                            00020101021226860014BR.GOV.BCB.PIX2564qrpix.bradesco.com.br/qr/v2/ae0c8929-dd2f-4b72-934b-f7cebc8938255204000053039865406197.005802BR5925GERUSA LORENZETTI DA ROSA6013FLORIANOPOLIS62070503***6304C531
                         </p>
                         {copySuccess && (
                             <p className="text-green-500 mt-2 text-lg font-semibold">{copySuccess}</p>
