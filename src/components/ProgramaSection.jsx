@@ -1,7 +1,7 @@
 import React from 'react';
-import PsicologaFlavia from '../assets/profissionais/PsicologaFlavia.png';
-import NutricionistaGerusa from '../assets/profissionais/NutricionistaGerusa.png';
-import GinecologistaGeane from '../assets/profissionais/GinecologistaGeane.png';
+// import PsicologaFlavia from '../assets/profissionais/PsicologaFlavia.png';
+// import NutricionistaGerusa from '../assets/profissionais/NutricionistaGerusa.png';
+// import GinecologistaGeane from '../assets/profissionais/GinecologistaGeane.png';
 
 const ProgramaSection = ({ id }) => {
   return (
@@ -22,7 +22,7 @@ const ProgramaSection = ({ id }) => {
           {/* 1ª Semana */}
           <div className="bg-white p-6 rounded-lg shadow-md flex-1 min-w-[300px] w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
             <h3 className="text-xl font-semibold text-purple-800 mb-2">Semana 1: Arrumando a casa</h3>
-            <h3 className="text-xl font-semibold text-purple-800 mb-2">11/11 - 17/11</h3>
+            {/* <h3 className="text-xl font-semibold text-purple-800 mb-2">11/11 - 17/11</h3> */}
             <h3 className="text-xl font-semibold text-purple-800 mb-2">Início de uma alimentação para o resto da vida!</h3>
             <p className="text-gray-700 mt-5 text-lg">Na primeira semana, vamos iniciar a transformação. Criando uma base sólida para o seu novo estilo de vida, priorizando sono, hidratação e uma alimentação equilibrada, visando o seu bem-estar e o conforto.</p>
             <ul className='list-disc text-left pl-10 text-lg mt-5 text-gray-700 space-y-4'>
@@ -32,9 +32,10 @@ const ProgramaSection = ({ id }) => {
               <li>Plano Alimentar e Primeiros Passos</li>
               <li>Controle Diário e Suporte</li>
               <li>Como Montar um Prato Saudável</li>
-              <li>Live Inicial: Boas-Vindas e Conversa com a <span className='text-violet-700 font-semibold'>Psicóloga Flávia Bez Lopes</span></li>
+              <li>Live Inicial: Boas-Vindas e Conversa com <span className='text-violet-700 font-semibold'>Psicóloga</span></li>
+              {/* <li>Live Inicial: Boas-Vindas e Conversa com a <span className='text-violet-700 font-semibold'>Psicóloga Flávia Bez Lopes</span></li> */}
             </ul>
-            <div className="flex flex-row justify-center items-center mt-4 gap-2 sm:mr-10 sm:gap-5">
+            {/* <div className="flex flex-row justify-center items-center mt-4 gap-2 sm:mr-10 sm:gap-5">
               <img 
                 src={PsicologaFlavia}
                 alt="Icone Flávia"
@@ -48,13 +49,13 @@ const ProgramaSection = ({ id }) => {
                     >
                         @flavialopespsicologa
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* 2ª Semana */}
           <div className="bg-white p-6 rounded-lg shadow-md flex-1 min-w-[300px] w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
             <h3 className="text-xl font-semibold text-purple-800 mb-2">Semana 2: Intestino</h3>
-            <h3 className="text-xl font-semibold text-purple-800 mb-2">18/11 - 24/11</h3>
+            {/* <h3 className="text-xl font-semibold text-purple-800 mb-2">18/11 - 24/11</h3> */}
             <h3 className="text-xl font-semibold text-purple-800 mb-2">Cuidando do seu intestino e melhorando seu bem estar!</h3>
             <p className="text-gray-700 mt-5 text-lg">Aqui o foco será o intestino, um órgão fundamental para nossa saúde e bem-estar. Um intestino saudável contribui para uma digestão eficiente, melhora a absorção de nutrientes e pode até influenciar o humor.</p>
             <ul className="list-disc text-left pl-10 text-lg mt-5 text-gray-700 space-y-4">
@@ -69,8 +70,9 @@ const ProgramaSection = ({ id }) => {
               <li>Consumo de Álcool: Moderação e Controle de Calorias</li>
               <li>Controle Diário e Suporte</li>
               <li>Live sobre instestino comigo, a <span className='text-violet-700 font-semibold'>Nutricionista Gerusa Lorenzetti</span></li>
+              {/* <li>Live sobre instestino comigo, a <span className='text-violet-700 font-semibold'>Nutricionista Gerusa Lorenzetti</span></li> */}
             </ul>
-            <div className="flex flex-row justify-center items-center mt-4 gap-2 sm:mr-10 sm:gap-5">
+            {/* <div className="flex flex-row justify-center items-center mt-4 gap-2 sm:mr-10 sm:gap-5">
               <img 
                 src={NutricionistaGerusa}
                 alt="Icone Gerusa"
@@ -84,13 +86,13 @@ const ProgramaSection = ({ id }) => {
                     >
                         @nutrigerusa
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* 3ª Semana */}
           <div className="bg-white p-6 rounded-lg shadow-md flex-1 min-w-[300px] w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
           <h3 className="text-xl font-semibold text-purple-800 mb-2">Semana 3: Menopausa</h3>
-            <h3 className="text-xl font-semibold text-purple-800 mb-2">25/11 - 01/12</h3>
+            {/* <h3 className="text-xl font-semibold text-purple-800 mb-2">25/11 - 01/12</h3> */}
             <h3 className="text-xl font-semibold text-purple-800 mb-5">Compreendendo o que acontece no seu corpo durante a Menopausa!</h3>
             <p className="text-gray-700 mt-5 text-lg">Nesta última semana, vamos mergulhar em temas fundamentais para o bem-estar feminino durante e após a menopausa, abordando questões hormonais, de saúde e longevidade.</p>
             <ul className="list-disc text-left pl-10 text-lg mt-5 text-gray-700 space-y-4">
@@ -100,9 +102,10 @@ const ProgramaSection = ({ id }) => {
               <li>Prevenção e controle de osteoporose e osteopenia</li>
               <li>A importância da alimentação durante a menopausa</li>
               <li>Longevidade</li>
-              <li>Live com médica a <span className='text-violet-700 font-semibold'>Ginecologista Geane Garlet</span></li>
+              <li>Live com <span className='text-violet-700 font-semibold'>Ginecologista</span></li>
+              {/* <li>Live com médica a <span className='text-violet-700 font-semibold'>Ginecologista Geane Garlet</span></li> */}
             </ul>
-            <div className="flex flex-row justify-center items-center mt-4 gap-2 sm:mr-10 sm:gap-5">
+            {/* <div className="flex flex-row justify-center items-center mt-4 gap-2 sm:mr-10 sm:gap-5">
               <img 
                 src={GinecologistaGeane}
                 alt="Icone Geane"
@@ -116,14 +119,14 @@ const ProgramaSection = ({ id }) => {
                     >
                         @geanegarlet
               </a>
-            </div>
+            </div> */}
           </div>
           
 
           {/* 4ª Semana */}
           <div className="bg-white p-6 rounded-lg shadow-md flex-1 min-w-[300px] w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
             <h3 className="text-xl font-semibold text-purple-800 mb-2">Semana 4: Otimizando a Queima de Gordura</h3>
-            <h3 className="text-xl font-semibold text-purple-800 mb-2">02/12 - 08/12</h3>
+            {/* <h3 className="text-xl font-semibold text-purple-800 mb-2">02/12 - 08/12</h3> */}
             <h3 className="text-xl font-semibold text-purple-800 mb-5">Seu corpo dos sonhos na menopausa!</h3>
             <p className="text-gray-700 mt-5 text-lg">Nesta semana, vamos focar em como alcançar o seu corpo dos sonhos durante a menopausa, utilizando estratégias que promovem a saúde e longevidade.</p>
             <ul className="list-disc text-left pl-10 text-lg mt-5 text-gray-700 space-y-4">

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import PagamentoSection from "./PagamentoSection";
+// import PagamentoSection from "./PagamentoSection";
 
 const DadosSection = () => {
     const [privacidadeExpanded, setPrivacidadeExpanded] = useState(false);
@@ -85,35 +85,41 @@ const DadosSection = () => {
 
                 
                 setShowPagamentoSection(true);
-                sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+                // sectionRef.current.scrollIntoView({ behavior: 'smooth' });
             } catch (error) {
                 console.error('Erro ao enviar os dados:', error);
             }
         }
     };
 
-    if (showPagamentoSection) {
-        window.history.pushState({}, '', '/#cadastro');
-        return <PagamentoSection />;
-    }
+    // if (showPagamentoSection) {
+    //     window.history.pushState({}, '', '/#cadastro');
+    //     return <PagamentoSection />;
+    // }
 
     return (
         <div ref={sectionRef} className="flex flex-col justify-center items-center md:mt-2 md:mb-10">
             <h1 className="text-3xl font-bold mb-6 text-violet-700">Quero meu corpo dos sonhos agora!</h1>
 
             <div className="text-lg font-semibold text-gray-700" style={{ maxWidth: '600px'}}>
-                <h3>
+                {/* <h3>
                     Falta pouco para você fazer parte do <span className="font-bold text-gray-900">Despertar 40+</span>!!
+                </h3> */}
+                <h3>
+                    Infelzente as inscrições para participar do <span className="font-bold text-gray-900">Despertar 40+</span> foram encerradas!
                 </h3>
                 <h3 className="mt-4">
+                    Porém se você tem interesse nesse programa, deixe seu contato abaixo que iremos te avisar quando abrirmos novas turmas e ajudaremos você a iniciar essa <span className="font-bold text-gray-800">jornada transformadora</span>.
+                </h3>
+                {/* <h3 className="mt-4">
                     Precisamos de alguns dados seus para ajudar você a iniciar essa <span className="font-bold text-gray-800">jornada transformadora</span>.
-                </h3>
-                <h3 className="mt-4">
+                </h3> */}
+                {/* <h3 className="mt-4">
                     Seus dados são coletados com o único propósito de facilitar nossa comunicação e somente membros da nossa equipe terão acesso a eles.
-                </h3>
+                </h3> */}
                 <h3 className="mt-4 mb-4">
                     Levamos sua privacidade e segurança a sério. Para saber mais sobre nossa{' '}
-                    <span className="text-violet-700 cursor-pointer font-bold"
+                    <span className="text-violet-700 font-bold"
                     >
                         Política de Privacidade{' '}
                     <span
@@ -201,7 +207,7 @@ const DadosSection = () => {
                     </button>
                 </>
             )}
-            {cadastrarClicked && (
+            {cadastrarClicked && !showPagamentoSection &&(
                 <>
                     <div
                         className="h-12 w-12 border-4 border-t-white  border-b-white  border-l-white border-r-purple-400 
@@ -209,15 +215,22 @@ const DadosSection = () => {
                     </div>
                 </>
             )}
+            {cadastrarClicked && showPagamentoSection &&(
+                <>
+                    <p className=" h-32 w-96 border-2 mt-6 p-2 border-purple-700 text-white font-bold text-lg">
+                        Não se preocupe, seus dados foram enviados com sucesso e você acabou de dar o primeiro passo para mudar a sua vida.
+                    </p>
+                </>
+            )}
 
-            <div className="flex flex-row justify-center items-center gap-5 md:gap-20 mt-6 mb-6">
+            {/* <div className="flex flex-row justify-center items-center gap-5 md:gap-20 mt-6 mb-6">
                 <div className="font-bold text-xl md:text-2xl">
                     <p className="mt-5 mb-4">R$ 197,00 à vista (no Pix ou no Cartão)</p>
                     <p className="mb-4">ou até</p>
                     <p>6x de R$ 40,00</p>
                 </div>
-            </div>
-            <div className="text-2xl font-bold text-yellow-500 bg-purple-500 px-3 rounded-xl" style={{ maxWidth: '900px' }}>
+            </div> */}
+            <div className="text-2xl font-bold text-yellow-500 bg-purple-500 px-3 rounded-xl mt-6" style={{ maxWidth: '900px' }}>
                 <h3 className="mt-4">
                     Vamos juntas no Despertar 40+ onde você irá ampliar o seu conhecimento e tomar as rédeas da sua vida.
                 </h3>

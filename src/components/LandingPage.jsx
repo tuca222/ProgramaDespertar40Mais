@@ -1,4 +1,6 @@
-import React, { useState, useRef } from 'react';
+// import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
+
 import '../App.css';
 import DespertarInicioImg from '../assets/Despertar40+Inicio.png';
 import ProgramaSection from './ProgramaSection';
@@ -7,13 +9,13 @@ import MaisSobreMimImg from '../assets/MaisSobreMim.png';
 import FAQImg from '../assets/ImagemFAQ.png';
 import FaqSection from './FaqSection';
 import DepoimentosSection from './DepoimentosSection';
-import PrecoSection from './PrecoSection';
+// import PrecoSection from './PrecoSection';
 import VideoExplicativo from './VideoExplicativo';
 import DadosSection from './DadosSection';
 
 
 const LandingPage = () => {
-  const [showDadosSection, setShowDadosSection] = useState(false)
+  // const [showDadosSection, setShowDadosSection] = useState(false)
   
   const dadosSectionRef = useRef(null);
 
@@ -23,7 +25,7 @@ const LandingPage = () => {
       sectionPreco.scrollIntoView({ behavior: 'smooth' });
         
        setTimeout(() => {
-         setShowDadosSection(true);
+        //  setShowDadosSection(true);
         if (dadosSectionRef.current) {
           dadosSectionRef.current.scrollIntoView({ behavior: 'smooth' });
         }
@@ -200,14 +202,15 @@ const LandingPage = () => {
 
       {/* Preço */}
       <section  id='garanta-sua-vaga' className="bg-gradient-r-valor px-4 py-8">
-        {!showDadosSection && (
+        {/* {!showDadosSection && (
           <PrecoSection />
-        )}
+        )} 
         {showDadosSection && (
           <div ref={dadosSectionRef}>
             <DadosSection />
           </div>
-        )}
+        )}*/}
+        <DadosSection />
       </section>
  
       {/* Depoimentos */}

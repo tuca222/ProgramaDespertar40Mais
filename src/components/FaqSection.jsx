@@ -16,7 +16,18 @@ const FaqSection = () => {
     },
     {
       question: 'Quando é o início do programa e qual a sua duração?',
-      answer: 'O programa inicia oficialmente no dia 11 de novembro de 2024 e tem duração de 4 semanas. Sendo do dia 11/11/2024 a 08/12/2024 e 09/12/2024 teremos nossa Live de encerramento.',
+      answer: (
+        <>
+         O programa já iniciou, então as inscrições estão encerradas. Porém deixe seu contato, clicando no botão acima: {' '}
+          <span
+            className="underline decoration-violet-500"
+          >
+            Garanta sua Vaga
+          </span>
+          , para ser avisada da próxima turma. O programa Despertar 40+ tem duração de 4 semanas.
+        </>
+      ),
+      // answer: 'O programa inicia oficialmente no dia 11 de novembro de 2024 e tem duração de 4 semanas. Sendo do dia 11/11/2024 a 08/12/2024 e 09/12/2024 teremos nossa Live de encerramento.',
     },
     {
       question: 'Como funciona o acompanhamento?',
@@ -24,13 +35,13 @@ const FaqSection = () => {
     },
     {
       question: 'Como irei para o Grupo do Whats e para o Instagram Secreto?',
-      answer: 'Após o seu pagamento ser confirmado, você será adicionada no Grupo do WhatsApp pela nossa equipe. No domingo, dia 10/11/2024, você recebá um link no Grupo do Whats para entrar no Instagram Secreto.',
+      answer: 'Após o seu pagamento ser confirmado, você será adicionada no Grupo do WhatsApp pela nossa equipe e um dia antes do início do programa você recebá um link no Grupo do Whats para entrar no Instagram Secreto.',
     },
     {
       question: 'Como vai funcionar o reembolso?',
       answer: (
         <>
-          O reembolso poderá ser feito até o dia 10/11/2024, um dia antes de iniciar o programa, pois a partir do dia 11/11 você já terá acesso aos materiais exclusivos do Despertar 40+. Para isso, basta enviar uma mensagem no WhatsApp {' '}
+          O reembolso poderá ser feito até um dia antes de iniciar o programa, pois após iniciado você já terá acesso aos materiais exclusivos do Despertar 40+. Para obter o reembolso, basta enviar uma mensagem no WhatsApp {' '}
           <a
             href="https://wa.me/5548999694084?text=Oi,%20gostaria%20de%20pedir%20o%20reembolso%20do%20Despertar%2040%2B"
             target="_blank"
