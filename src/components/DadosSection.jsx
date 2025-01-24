@@ -106,7 +106,7 @@ const DadosSection = () => {
                     Falta pouco para você fazer parte do <span className="font-bold text-gray-900">Despertar 40+</span>!!
                 </h3> */}
                 <h3>
-                    Infelzente as inscrições para participar do <span className="font-bold text-gray-900">Despertar 40+</span> foram encerradas!
+                    Infelizmente as inscrições para participar do <span className="font-bold text-gray-900">Despertar 40+</span> foram encerradas!
                 </h3>
                 <h3 className="mt-4">
                     Porém se você tem interesse nesse programa, deixe seu contato abaixo que iremos te avisar quando abrirmos novas turmas e ajudaremos você a iniciar essa <span className="font-bold text-gray-800">jornada transformadora</span>.
@@ -217,9 +217,14 @@ const DadosSection = () => {
             )}
             {cadastrarClicked && showPagamentoSection &&(
                 <>
-                    <p className=" h-32 w-96 border-2 mt-6 p-2 border-purple-700 text-white font-bold text-lg">
-                        Não se preocupe, seus dados foram enviados com sucesso e você acabou de dar o primeiro passo para mudar a sua vida.
-                    </p>
+                    <div className=" h-60 w-96 border-2 mt-6 p-2 border-purple-700 text-white font-bold text-lg">
+                        <p>
+                            Não se preocupe, seus dados foram enviados com sucesso e você acabou de dar o primeiro passo para mudar a sua vida!
+                        </p>
+                        <p>
+                            Assim que possível, minha equipe entrará em contato com você pelo WhatsApp com mais informações sobre o programa <strong>Despertar 40+</strong>.
+                        </p>
+                    </div>
                 </>
             )}
 

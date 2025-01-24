@@ -317,7 +317,7 @@ const LandingPage = () => {
       {/* Footer */}
       <footer className="bg-violet-700 text-white text-center px-4 py-2">
         <p>Nutricionista Gerusa Lorenzetti.</p>
-        <p>&copy; {new Date().getFullYear()}</p>
+        <p>&copy; 7Z Tecnologia - UNA {new Date().getFullYear()}</p>
         <p>Todos os direitos reservados.</p>
       </footer>
     </div>
