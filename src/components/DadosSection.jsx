@@ -37,7 +37,7 @@ const DadosSection = () => {
 
         if (value.length <= 11) {
             if (value.length > 2) value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
-            if (value.length > 7) value = `${value.slice(0, 10)}-${value.slice(10)}`;
+            // if (value.length > 7) value = `${value.slice(0, 10)}-${value.slice(10)}`;
 
             setWhatsapp(value);
 
